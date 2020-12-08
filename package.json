@@ -1,0 +1,65 @@
+{
+  "name": "axis-playground",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "node cli/index.js & vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:docs": "npm run build && node ./cli export ./docs -c tailwind.config.sample.js",
+    "prepublishOnly": "npm run lint --no-fix && npm run build",
+    "lint": "vue-cli-service lint",
+    "test": "echo \"No test specified\"",
+    "version": "npm run build:docs && git add docs"
+  },
+  "bin": {
+    "tailwind-config-viewer": "./cli/index.js",
+    "tailwindcss-config-viewer": "./cli/index.js"
+  },
+  "files": [
+    "server",
+    "cli",
+    "dist",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "@koa/router": "^9.0.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.3.1",
+    "commander": "^6.0.0",
+    "core-js": "^2.6.5",
+    "fs-extra": "^9.0.1",
+    "koa": "^2.12.0",
+    "koa-static": "^5.0.0",
+    "open": "^7.0.4",
+    "portfinder": "^1.0.26",
+    "postcss": "^7",
+    "replace-in-file": "^6.1.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typeface-barlow": "^1.1.13",
+    "typeface-barlow-condensed": "^1.1.13",
+    "typeface-ibm-plex-mono": "^1.1.13",
+    "vue": "^2.6.10",
+    "vue-draggable-resizable": "^2.2.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "postcss-focus-visible": "^5.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^4.0.4",
+    "postcss-nested": "^4.2.3",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "tailwindcss-dark-mode": "^1.1.6",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
