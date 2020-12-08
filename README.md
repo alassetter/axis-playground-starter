@@ -1,6 +1,6 @@
-# Tailwind Config Viewer
+# Axis Playground
 
-![Screenshot of UI](https://gitlab.com/cecilianpartners/axis-playground/raw/master/ui-example.jpg)
+![Screenshot of UI](https://github.com/alassetter/axis-playground-starter/raw/master/ui-example.jpg)
 
 Axis Playground is a local UI tool for visualizing your Tailwind CSS configuration file. Keep it open during development to quickly reference custom Tailwind values/classes. Easily navigate between sections of the configuration and copy class names to your clipboard by clicking on them.
 
